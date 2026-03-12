@@ -16,6 +16,13 @@ jobs:
         node-version: '12'
     - name: Install dependencies
       run: npm install
+    - name: Seal Security Fix
+      uses: seal-community/cli-action@latest
+      with:
+        mode: fix
+        fix_mode: remote
+        token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJhYzE2Mjc3In0.eyJzdWIiOiI1MTM2ZDE4NC1iZjQxLTRmZTMtOWRkZC02MjlkOTNkNzJiMzYiLCJ0eXBlIjoidGVuYW50QWNjZXNzVG9rZW4iLCJ0ZW5hbnRJZCI6IjI5YzQyYjZhLThiNTEtNDMxYS05MTY1LWEwZmI4YmJkZWFmYiIsImFwcGxpY2F0aW9uSWQiOiIwMWQ3NTcxMy04NjZlLTRlZGYtODQ3Zi1lZDkwYTk0Nzg1ZGIiLCJyb2xlcyI6WyJGRVRDSC1ST0xFUy1CWS1BUEkiXSwicGVybWlzc2lvbnMiOlsiRkVUQ0gtUEVSTUlTU0lPTlMtQlktQVBJIl0sImF1ZCI6ImJhYzE2Mjc3LTVjYmUtNDA3Yy04MjM5LWRmZmY3Mzk4ZWIwZSIsImlzcyI6Imh0dHBzOi8vbG9naW4uc2VhbHNlY3VyaXR5LmlvIiwiaWF0IjoxNzY2NTAzNzUzfQ.jeGUchiR3D601ON2q_zTSpiGvU9eH2UBN2CTFV0Ya9txLKVPMRX-mtUzlxvhsjFK4aHAzr9KwBA5GCZt_lM2Ph5wmoE70eoO6y-rroxZMSvk5hiIPixNP0EV9AqX9GrDaVpR8YSSo1nkSom5P6Oxl55FbhG2MLRtm_iFOrTfkz-F1OQX42z0NqOBRTe0YKsa_qPE5Hgn0X-DDdoiFQj1Tb0W119b-qGrAYnkTHurhFgtCbF6wnzM91-uUYzXUJL4AHKRqQteH6wuAneg8Ex0wsQTmWKDAajgaPaEe9PH7wwfboijIWBuZxejz0TsLGLYwo5isgpfrayPrc1MowGxcg
+        target: package-lock.json
     - name: Lint sources
       run: npm run lint:sources -- --max-warnings 0
     - name: Lint types
@@ -32,6 +39,13 @@ jobs:
         node-version: ${{ matrix.node_version }}
     - name: Install dependencies
       run: npm install
+    - name: Seal Security Fix
+      uses: seal-community/cli-action@latest
+      with:
+        mode: fix
+        fix_mode: remote
+        token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJhYzE2Mjc3In0.eyJzdWIiOiI1MTM2ZDE4NC1iZjQxLTRmZTMtOWRkZC02MjlkOTNkNzJiMzYiLCJ0eXBlIjoidGVuYW50QWNjZXNzVG9rZW4iLCJ0ZW5hbnRJZCI6IjI5YzQyYjZhLThiNTEtNDMxYS05MTY1LWEwZmI4YmJkZWFmYiIsImFwcGxpY2F0aW9uSWQiOiIwMWQ3NTcxMy04NjZlLTRlZGYtODQ3Zi1lZDkwYTk0Nzg1ZGIiLCJyb2xlcyI6WyJGRVRDSC1ST0xFUy1CWS1BUEkiXSwicGVybWlzc2lvbnMiOlsiRkVUQ0gtUEVSTUlTU0lPTlMtQlktQVBJIl0sImF1ZCI6ImJhYzE2Mjc3LTVjYmUtNDA3Yy04MjM5LWRmZmY3Mzk4ZWIwZSIsImlzcyI6Imh0dHBzOi8vbG9naW4uc2VhbHNlY3VyaXR5LmlvIiwiaWF0IjoxNzY2NTAzNzUzfQ.jeGUchiR3D601ON2q_zTSpiGvU9eH2UBN2CTFV0Ya9txLKVPMRX-mtUzlxvhsjFK4aHAzr9KwBA5GCZt_lM2Ph5wmoE70eoO6y-rroxZMSvk5hiIPixNP0EV9AqX9GrDaVpR8YSSo1nkSom5P6Oxl55FbhG2MLRtm_iFOrTfkz-F1OQX42z0NqOBRTe0YKsa_qPE5Hgn0X-DDdoiFQj1Tb0W119b-qGrAYnkTHurhFgtCbF6wnzM91-uUYzXUJL4AHKRqQteH6wuAneg8Ex0wsQTmWKDAajgaPaEe9PH7wwfboijIWBuZxejz0TsLGLYwo5isgpfrayPrc1MowGxcg
+        target: package-lock.json
     - name: Test sources
       run: npm run test:sources
     - name: Test types
@@ -45,5 +59,12 @@ jobs:
         node-version: '12'
     - name: Install dependencies
       run: npm install
+    - name: Seal Security Fix
+      uses: seal-community/cli-action@latest
+      with:
+        mode: fix
+        fix_mode: remote
+        token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJhYzE2Mjc3In0.eyJzdWIiOiI1MTM2ZDE4NC1iZjQxLTRmZTMtOWRkZC02MjlkOTNkNzJiMzYiLCJ0eXBlIjoidGVuYW50QWNjZXNzVG9rZW4iLCJ0ZW5hbnRJZCI6IjI5YzQyYjZhLThiNTEtNDMxYS05MTY1LWEwZmI4YmJkZWFmYiIsImFwcGxpY2F0aW9uSWQiOiIwMWQ3NTcxMy04NjZlLTRlZGYtODQ3Zi1lZDkwYTk0Nzg1ZGIiLCJyb2xlcyI6WyJGRVRDSC1ST0xFUy1CWS1BUEkiXSwicGVybWlzc2lvbnMiOlsiRkVUQ0gtUEVSTUlTU0lPTlMtQlktQVBJIl0sImF1ZCI6ImJhYzE2Mjc3LTVjYmUtNDA3Yy04MjM5LWRmZmY3Mzk4ZWIwZSIsImlzcyI6Imh0dHBzOi8vbG9naW4uc2VhbHNlY3VyaXR5LmlvIiwiaWF0IjoxNzY2NTAzNzUzfQ.jeGUchiR3D601ON2q_zTSpiGvU9eH2UBN2CTFV0Ya9txLKVPMRX-mtUzlxvhsjFK4aHAzr9KwBA5GCZt_lM2Ph5wmoE70eoO6y-rroxZMSvk5hiIPixNP0EV9AqX9GrDaVpR8YSSo1nkSom5P6Oxl55FbhG2MLRtm_iFOrTfkz-F1OQX42z0NqOBRTe0YKsa_qPE5Hgn0X-DDdoiFQj1Tb0W119b-qGrAYnkTHurhFgtCbF6wnzM91-uUYzXUJL4AHKRqQteH6wuAneg8Ex0wsQTmWKDAajgaPaEe9PH7wwfboijIWBuZxejz0TsLGLYwo5isgpfrayPrc1MowGxcg
+        target: package-lock.json
     - name: Run benchmark
       run: npm run bench
